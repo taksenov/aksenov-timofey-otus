@@ -1,0 +1,6 @@
+/public
+/src/serviceWorker.js
+/scripts
+/config
+/node_modules
+**/@mocks/*.ts
