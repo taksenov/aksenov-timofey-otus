@@ -16,7 +16,7 @@ const rectanglify = (arr: any) => {
     throw new Error('Входные данные должны быть массивом массивов (матрицей)');
   }
 
-  let maxCols;
+  // let maxCols;
 
   const result = arr.map;
 
