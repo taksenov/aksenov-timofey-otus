@@ -2,13 +2,15 @@
 
 ## Студент: Аксенов Тимофей (@taksenov)
 
-Используется `ts-node`
+**Задача про список рекомендаций maxItemAssociation**
+
+Запуск:
 
 ```sh
 npx ts-node ./src/javascript/js-1/compute.ts
 ```
 
-Тесты
+Тесты:
 
 ```sh
 npm run test
