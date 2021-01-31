@@ -29,6 +29,26 @@ describe('Numbers data in arrs', () => {
 });
 
 describe('Strings data in arrs', () => {
+  test('Simple strgs arrs', () => {
+    expect(
+      compute([
+        ['a', 'b'],
+        ['a', 'c'],
+        ['d', 'e'],
+        ['d', 'e'],
+      ]),
+    ).toEqual(['a', 'b', 'c']);
+    expect(
+      compute([
+        ['a', 'b'],
+        ['a', 'c'],
+        ['d', 'e'],
+        ['d', 'e'],
+        ['d', 'e'],
+      ]),
+    ).toEqual(['d', 'e']);
+  });
+
   test('Rectangle arrs', () => {
     expect(compute(matrixRectStrs)).toEqual(matrixRectStrsRes);
   });
