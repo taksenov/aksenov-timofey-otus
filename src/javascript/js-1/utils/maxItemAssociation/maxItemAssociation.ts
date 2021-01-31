@@ -87,7 +87,8 @@ const maxItemAssociation: (
         arr: Array<string | number | null>,
       ) => arr.indexOf(elem) === pos,
     )
-    .filter(Boolean);
+    .filter(Boolean)
+    .sort();
 
   return result;
 };
