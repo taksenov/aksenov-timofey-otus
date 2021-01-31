@@ -1,15 +1,3 @@
-Запуск:
-
-```sh
-npx ts-node ./src/javascript/js-1/compute.ts
-```
-
-Тесты:
-
-```sh
-npm run test
-```
-
 # About
 
 **Курс OTUS JavaScript Developer. Professional**
