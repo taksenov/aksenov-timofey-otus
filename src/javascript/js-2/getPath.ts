@@ -9,26 +9,24 @@ export const getPath: (el: HTMLElement | any) => string = element => {
     return '';
   }
 
-  let tempRes: Array<string> = [];
-
   /**
    * Вспомогательная функция для получения свойств элемента
    *
    * @param {*} elem
-   * @return {string} selector
+   * @return {string} res
    */
   const getProps: (el: HTMLElement) => string = elem => {
     const tag = elem.tagName.toLowerCase();
-    let selector = tag;
+    let res = tag;
 
     if (elem.id !== '') {
-      selector = `${selector}#${elem.id}`;
+      res = `${res}#${elem.id}`;
     }
     if (elem.className !== '') {
-      selector = `${selector}.${elem.className.trim().split(/\s+/).join('.')}`;
+      res = `${res}.${elem.className.trim().split(/\s+/).join('.')}`;
     }
 
-    return selector;
+    return res;
   };
 
   /**
@@ -53,19 +51,21 @@ export const getPath: (el: HTMLElement | any) => string = element => {
     return res;
   };
 
+  let tmpRes: Array<string> = [];
+
   /**
-   * Сканирование DOM дерева
+   * Рекурсивное сканирование DOM дерева
    *
    * @param {*} elem
    * @returns
    */
   const scanDOM: (el: HTMLElement | any) => string[] = elem => {
     if (elem === document.body) {
-      tempRes = [...tempRes, 'body'];
-      return tempRes.reverse();
+      tmpRes = [...tmpRes, 'body'];
+      return tmpRes.reverse();
     }
 
-    tempRes = [...tempRes, getProps(elem) + getHierarchyPosition(elem)];
+    tmpRes = [...tmpRes, getProps(elem) + getHierarchyPosition(elem)];
 
     return scanDOM(elem.parentElement);
   };
