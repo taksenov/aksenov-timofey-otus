@@ -5,6 +5,7 @@
   "author": "taksenov@gmail.com",
   "license": "MIT",
   "scripts": {
+    "test:watch": "jest --watch --colors",
     "test": "jest",
     "lint": "eslint -c .eslintrc --ignore-path .eslintignore src/"
   },
