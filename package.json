@@ -1,10 +1,11 @@
 {
   "name": "aksenov-timofey-otus",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "author": "taksenov@gmail.com",
   "license": "MIT",
   "scripts": {
+    "test:watch": "jest --watch --colors",
     "test": "jest",
     "lint": "eslint -c .eslintrc --ignore-path .eslintignore src/"
   },
