@@ -120,7 +120,7 @@ npm run lint
 
  PASS  src/nodejs/nodejs-1/tree.test.ts
   Should be
-    ✓ softly "equal" data from result.txt and MOCK_DATA__FROM_EXAMPLE (4 ms)
+    ✓ softly "equal" data from result.json and MOCK_DATA__FROM_EXAMPLE (4 ms)
 
 Test Suites: 4 passed, 4 total
 Tests:       24 passed, 24 total
